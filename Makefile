@@ -184,7 +184,7 @@ libutil :
 libs :
 	( cd clib ; $(MAKE) TLDEPS= all || exit 1 )
 
-lrmods : pw
+lrmods : libs libutil libla libfft
 	( cd LR_Modules ; $(MAKE) TLDEPS= all || exit 1 )
 
 dftd3 : mods
